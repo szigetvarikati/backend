@@ -22,7 +22,8 @@ public class SoundController {
     }
 
     @PostMapping("/all")
-    public @ResponseBody List<SoundEntity> getAllSounds() {
+    @ResponseBody
+    public List<SoundEntity> getAllSounds() {
         return soundService.getAllSounds();
     }
 
@@ -51,5 +52,4 @@ public class SoundController {
             return ResponseEntity.status(404).build();
         }
     }
-
 }

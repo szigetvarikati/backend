@@ -44,8 +44,22 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-HomeworkSound is a sound management system designed to handle various sound files efficiently. This backend component is built using Spring Boot and integrates with a PostgreSQL database to store sound-related data. It provides RESTful API endpoints for creating, retrieving, updating, and deleting sound entries.
+HomeworkSound is a sound management system designed to handle various sound files efficiently. This backend component is built using Spring Boot and integrates with a PostgreSQL database to store sound-related data.
 
+The task involves creating a backend application with integrated tests to manage music data stored in a PostgreSQL database. The backend exposes CRUD operations via an API for communication with the UI, which interacts through HTTP POST requests. The communication protocol is based on FlatBuffers (https://flatbuffers.dev/), and the schema is provided.
+
+
+## Project Components
+
+- **Backend:**
+  - Implements CRUD operations for music data.
+  - Exposes API endpoints for communication.
+  - Utilizes FlatBuffers for communication.
+
+- **Testing:**
+  - Integration tests ensure the functionality of the backend.
+  - Implemented using specified testing frameworks.
+    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Features

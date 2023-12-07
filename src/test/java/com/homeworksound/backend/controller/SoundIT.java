@@ -89,6 +89,9 @@ public class SoundIT {
         mockMvc.perform(post("/api/sounds/delete/1")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
+
+        List<SoundEntity> allSounds = soundRepository.findAll();
+        assertThat(allSounds).hasSize(testData.size() - 1);
     }
 
     @Test

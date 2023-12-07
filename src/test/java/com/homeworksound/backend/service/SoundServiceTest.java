@@ -36,9 +36,9 @@ class SoundServiceTest {
 
     private void initializeTestData() {
         testData = new ArrayList<>();
-        testData.add(new SoundEntity(1, "First Sound", new byte[]{}, "mp3"));
-        testData.add(new SoundEntity(2,"Second Sound", new byte[]{}, "waw"));
-        testData.add(new SoundEntity(10,"Tenth Sound", new byte[]{}, "wma"));
+        testData.add(new SoundEntity("First Sound", new byte[]{}, "mp3"));
+        testData.add(new SoundEntity("Second Sound", new byte[]{}, "waw"));
+        testData.add(new SoundEntity("Tenth Sound", new byte[]{}, "wma"));
     }
     @Test
     public void getAllSound_test() {
@@ -50,7 +50,7 @@ class SoundServiceTest {
 
 
     @ParameterizedTest
-    @ValueSource(ints = {1, 2, 10})
+    @ValueSource(ints = {1, 2, 3})
     public void getSoundById_shouldReturnEntity(int id) {
         SoundEntity expectedEntity = new SoundEntity();
         expectedEntity.setSoundId(id);
@@ -81,7 +81,7 @@ class SoundServiceTest {
 
     @Test
     public void createNewSound_shouldSaveAndReturnEntity() {
-        SoundEntity inputEntity = new SoundEntity(33, "New sound", new byte[]{}, "mp3");
+        SoundEntity inputEntity = new SoundEntity("New sound", new byte[]{}, "mp3");
         SoundEntity savedEntity;
 
         Mockito.when(repository.save(inputEntity)).thenReturn(inputEntity);
@@ -115,7 +115,8 @@ class SoundServiceTest {
     @Test
     public void updateSoundById_shouldUpdateExistingEntity() {
         Integer existingId = 1;
-        SoundEntity updatedSound = new SoundEntity(existingId, "New Sound", new byte[]{}, "waw");
+
+        SoundEntity updatedSound = new SoundEntity("New Sound", new byte[]{}, "waw");
 
         Mockito.when(repository.findById(existingId)).thenReturn(Optional.of(testData.get(0)));
 
@@ -134,7 +135,7 @@ class SoundServiceTest {
     @Test
     public void updateSoundById_shouldThrowExceptionForNonExistingEntity(){
         Integer nonExistingId = 111;
-        SoundEntity updatedSound = new SoundEntity(nonExistingId, "New Sound", new byte[]{}, "waw");
+        SoundEntity updatedSound = new SoundEntity("New Sound", new byte[]{}, "waw");
 
         Mockito.when(repository.findById(nonExistingId)).thenReturn(Optional.empty());
 

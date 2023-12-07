@@ -17,11 +17,12 @@ public class SoundEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer soundId;
 
+    @Getter
     @Column(nullable = false)
     private String soundName;
 
     @Lob
-    //@Column( nullable = false)
+    @Column( nullable = false)
     private byte[] soundData;
 
     @Column(nullable = false)
@@ -32,7 +33,7 @@ public class SoundEntity {
 
     private LocalDateTime soundUpdatedDatetime;
 
-    public SoundEntity(Integer soundId, String soundName, byte[] soundData, String soundExtension) {
+    public SoundEntity(String soundName, byte[] soundData, String soundExtension) {
 
         this.soundName = soundName;
         this.soundData = soundData;

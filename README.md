@@ -24,9 +24,8 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-         <li><a href="#built-with">Features</a></li>
-            <li><a href="#built-with">Technologies used</a></li>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#technologies-used">Technologies used</a></li>
       </ul>
     </li>
     <li>
@@ -35,6 +34,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#next-step">Next Step</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -46,22 +46,25 @@
 
 HomeworkSound is a sound management system designed to handle various sound files efficiently. This backend component is built using Spring Boot and integrates with a PostgreSQL database to store sound-related data.
 
+### Task
+
 The task involves creating a backend application with integrated tests to manage music data stored in a PostgreSQL database. The backend exposes CRUD operations via an API for communication with the UI, which interacts through HTTP POST requests. The communication protocol is based on FlatBuffers (https://flatbuffers.dev/), and the schema is provided.
 
 
-## Project Components
+### Project Components
 
 - **Backend:**
-  - Implements CRUD operations for music data.
-  - Exposes API endpoints for communication.
-  - Utilizes FlatBuffers for communication.
+  - Implements CRUD operations for music data
+  - Exposes API endpoints for communication
+  - (Utilizes FlatBuffers for communication)
 
 - **Testing:**
-  - Integration tests ensure the functionality of the backend.
-  - Implemented using specified testing frameworks.
+  - Integration tests ensure the functionality of the backend
+  - Implemented using specified testing frameworks
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FEATURES -->
 ### Features
 
 - **Create Sound:** Add new sound entries with details such as name, data, and extension.
@@ -69,13 +72,14 @@ The task involves creating a backend application with integrated tests to manage
 - **Update Sound:** Modify the details of existing sound entries.
 - **Delete Sound:** Remove sound entries from the system.
 
+<!-- BUILT WITH -->
 ### Technologies Used
 
-- **Spring Boot:** A Java-based framework for building robust and scalable applications.
-- **PostgreSQL:** A powerful open-source relational database system.
-- **JUnit:** A testing framework for Java to ensure code reliability.
-- **MockMvc:** A testing framework for Spring MVC applications.
-- **ObjectMapper:** A library for converting Java objects to JSON and vice versa.
+- **Spring Boot:** A Java-based framework for building robust and scalable applications
+- **PostgreSQL:** A powerful open-source relational database system
+- **JUnit:** A testing framework for Java to ensure code reliability
+- **MockMvc:** A testing framework for Spring MVC applications
+- **ObjectMapper:** A library for converting Java objects to JSON and vice versa
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -112,15 +116,21 @@ Follow this quide to run and try the application.
 
 ## Testing
 
-The project includes unit tests and integration tests to ensure the reliability of the backend functionalities. You can run the tests using Maven:
+The project includes unit tests and integration tests to ensure the reliability of the backend functionalities. You can run every of the tests using Maven:
 
 ```bash
 mvn verify
 ```
 <p align="center">
   <img src="https://imgur.com/X24k9Gj.png">
+  <p>
   <img src="https://imgur.com/CoU16Ek.png">
 </p>
+
+<!-- NEXT STEP -->
+## Next step
+
+Integrate FlatBuffers to improve the efficiency of data serialization and deserialization.
 
 <!-- CONTACT -->
 ## Contact
@@ -134,8 +144,6 @@ Project Link: https://github.com/szigetvarikati/backend
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/szigetvarikati/backend.svg?style=for-the-badge
-[contributors-url]: https://github.com/szigetvarikati/backend/graphs/contributors
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/katalin-szigetvári-9829519a
 [product-main]: https://imgur.com/a/jEvI3mU

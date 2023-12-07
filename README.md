@@ -1,6 +1,5 @@
 <a name="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <h3 align="center">Backend Application with Integration tests</h3>

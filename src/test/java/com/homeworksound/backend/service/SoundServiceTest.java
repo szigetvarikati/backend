@@ -40,6 +40,7 @@ class SoundServiceTest {
         testData.add(new SoundEntity("Second Sound", new byte[]{}, "waw"));
         testData.add(new SoundEntity("Tenth Sound", new byte[]{}, "wma"));
     }
+
     @Test
     public void getAllSound_test() {
         Mockito.when(repository.findAll()).thenReturn(testData);
@@ -47,7 +48,6 @@ class SoundServiceTest {
         int expectedResultSize = testData.size();
         assertEquals(expectedResultSize, result.size());
     }
-
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3})
@@ -100,9 +100,7 @@ class SoundServiceTest {
     @Test
     public void deleteById_shouldDeleteExistingEntity() {
         Integer existingId = 1;
-
         underTest.deleteById(existingId);
-
         Mockito.verify(repository, Mockito.times(1)).deleteById(existingId);
     }
 

@@ -1,6 +1,5 @@
 package com.homeworksound.backend.model;
 
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,7 +33,6 @@ public class SoundEntity {
     private LocalDateTime soundUpdatedDatetime;
 
     public SoundEntity(String soundName, byte[] soundData, String soundExtension) {
-
         this.soundName = soundName;
         this.soundData = soundData;
         this.soundExtension = soundExtension;
